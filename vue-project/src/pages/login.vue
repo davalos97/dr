@@ -22,7 +22,7 @@ const validateForm = () => {
 const logIn = async () => {
     if (!validateForm()) return
 
-    const res = await fetch('/dro/api/login.php', {
+    const res = await fetch('/dr/api/login.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email.value, password: password.value })

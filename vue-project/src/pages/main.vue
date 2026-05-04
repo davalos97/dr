@@ -29,7 +29,7 @@ onMounted(async () => {
     username.value = localStorage.getItem('username')
 
     //fetch all users
-    const res = await fetch('/dro/api/getUsers.php', {
+    const res = await fetch('/dr/api/getUsers.php', {
         headers: { 'Authorization': 'Bearer ' + token }
     })
     users.value = await res.json()

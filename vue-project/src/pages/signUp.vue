@@ -28,7 +28,7 @@ const validateForm = () => {
 const signUp = async () => {
     if (!validateForm()) return
 
-    const res = await fetch('/dro/api/signup.php', {
+    const res = await fetch('/dr/api/signup.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
