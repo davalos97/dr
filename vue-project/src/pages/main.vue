@@ -125,6 +125,9 @@ async function enter(){
         </div>
 
     </div>
+    <div class="rightbar">
+        <h4>TL;DR</h4>
+    </div>
 </div>
 </template>
 
@@ -183,6 +186,17 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.rightbar {
+    width: 250px;
+    background-color: #2a2a2a;
+    border-left: 1px solid #444;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #888;
 }
 
 .profileLayout h3 {
