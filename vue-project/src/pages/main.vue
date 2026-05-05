@@ -16,6 +16,7 @@ const username = ref('');
 const message = ref('');
 const users = ref([]);
 const chatHistory = ref([]);
+const summary = ref('No summary yet.');
 
 // const { status, data, error, close } = useEventSource('/api/sse-endpoint');
 
@@ -58,6 +59,12 @@ const packageMessageAnduserID = () => {
         user_id: userID,
         content: message.value
     }
+}
+
+const search = async () => {
+    const res = await fetch('https://davalos.cs3680.com/messages/get_summary.php');
+    const data = await res.json();
+    summary.value = data.summary;
 }
 
 
@@ -127,6 +134,9 @@ async function enter(){
     </div>
     <div class="rightbar">
         <h4>TL;DR</h4>
+        <p class="tldr"> 
+            {{ summary }}
+        </p>
     </div>
 </div>
 </template>
