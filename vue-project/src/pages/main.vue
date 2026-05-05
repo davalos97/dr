@@ -61,11 +61,11 @@ const packageMessageAnduserID = () => {
     }
 }
 
-// const search = async () => {
-//     const res = await fetch('https://davalos.cs3680.com/api/get_summary.php');
-//     const data = await res.json();
-//     summary.value = data.summary;
-// }
+const search = async () => {
+    const res = await fetch('https://davalos.cs3680.com/api/get_summary.php');
+    const data = await res.json();
+    summary.value = data.summary;
+}
 
 
 async function enter(){
