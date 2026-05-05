@@ -82,58 +82,50 @@ async function enter(){
 }
 
 </script>
-<template>
 
+<template>
 <div class="fulltextcontainer">
     <div class="sidebar">
         <div class="profileLayout">
-            <h3>{{  username  }}</h3>
+            <h3>{{ username }}</h3>
             <button @click="logOut">Log Out</button>
         </div>
-
         <div class="userList">
             <h4>Users</h4>
             <div v-for="user in users" :key="user.user_id" class="userItem">
-                {{  user.username  }}
+                {{ user.username }}
             </div>
         </div>
     </div>
 
-    <div class="chat-window">
-        <div v-for="msg in chatHistory" :key="msg.message_id" class="message-bubble">
-            <span class="user">User {{ msg.user_id }}:</span>
-            <p class="text">{{ msg.content }}</p>
-            <small class="time">{{ msg.sent_at }}</small>
-        </div>
-    </div>
+    <div class="container">
 
-<div class="container">
-    
-    <div class="textplate">
-        <span class="icon">+</span>
+        <div class="chat-window">
+            <div v-for="msg in chatHistory" :key="msg.message_id" class="message-bubble">
+                <span class="user">User {{ msg.user_id }}:</span>
+                <p class="text">{{ msg.content }}</p>
+                <small class="time">{{ msg.sent_at }}</small>
+            </div>
+        </div>
+
+        <div class="textplate">
+            <span class="icon">+</span>
             <textarea
-                v-model="message" 
-                name="mainText" 
-                rows="2" 
+                v-model="message"
+                name="mainText"
+                rows="2"
                 cols="33"
                 placeholder="Text here...">
-            </textarea> <!-- can the error go away-->
-
-            <div class="search">
-                <input type="text" placeholder="Search...">
-                <!-- pull js search into here-->
-            </div> 
+            </textarea>
             <button class="sendBtn" @click="enter">Send</button>
+        </div>
 
-            
+        <div class="squareAI">
+            <button class="aiButton" @click="search">Summarize</button>
+        </div>
+
     </div>
-    <div class="squareAI">
-        <button class="aiButton" @click="search">Summarize</button>
-    </div>  
 </div>
- 
-</div>
-
 </template>
 
 
