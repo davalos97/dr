@@ -223,30 +223,42 @@ html, body {
     background-color: #444;
 }
 
-.container{
+.container {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;      
+    justify-content: flex-end;   
     min-height: 100vh;
     width: 100%;
     background-color: #1a1a1a;
     position: relative;
+    padding-bottom: 20px;        
+}
+
+.chat-window {
+    flex: 1;                     
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 20px 20px 20px 20px;
+    gap: 10px;
+    background-color: #1a1a1a;
+    margin-bottom: 0;            
 }
 
 .textplate {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #444; 
+    border: 1px solid #444;
     padding: 8px 16px;
-    width: 100%;
     border-radius: 15px;
     max-width: 600px;
+    width: calc(100% - 40px);   
+    margin: 0 auto;              
     transition: border-color 0.3s;
-    background-color: #2a2a2a; 
-    position: absolute;
-    top: 80%;
+    background-color: #2a2a2a;
+    position: static;            
 }
 
 textarea {
@@ -277,17 +289,6 @@ input[type="text"] {
     color: white;
 }
 
-.chat-window {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    padding: 20px;
-    gap: 10px;
-    margin-bottom: 120px;
-    background-color: #1a1a1a;
-}
-
 .message-bubble {
     background-color: #2a2a2a;
     border-radius: 10px;
@@ -315,15 +316,4 @@ input[type="text"] {
     display: block;
     margin-top: 4px;
 }
-
-.sendBtn {
-    background-color: #4a9eff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
 </style>

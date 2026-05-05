@@ -1,13 +1,17 @@
 body {
     margin: 0;
+    padding: 0;
+}
+
+.login-page {
     height: 100vh;
     display: flex;
     justify-content: center;  
     align-items: center;
-    background-color: rgb(187, 125, 43)    !important;      
+    background-color: rgb(187, 125, 43);      
 }
 
-.container {
+.login-container {
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -18,12 +22,12 @@ body {
     color: #000000;    
 }
 
-input {
+.login-container input {
     display: block;
     margin: 10px auto;
 }
 
-button {
+.login-container button {
     margin-top: 10px;
 }
 

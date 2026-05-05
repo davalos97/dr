@@ -1,4 +1,5 @@
 <script setup>
+import '../styles/signup.css'
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -52,7 +53,8 @@ const signUp = async () => {
 </script>
 
 <template>
-    <div class="container">
+    <div class="signup-page">
+    <div class="signup-container">
         <h1>Sign Up!</h1>
         <form @submit.prevent="signUp">
             <label for="firstName">First Name: </label>
@@ -78,6 +80,5 @@ const signUp = async () => {
             <br>
         </form>
     </div>
+</div>
 </template>
-
-
