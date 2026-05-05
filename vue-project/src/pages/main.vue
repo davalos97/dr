@@ -43,7 +43,7 @@ const logOut = () => {
     router.push('/')
 }
 
-const EndpointA = new EventSource('https://davalos.cs3680.com/messages/stream.php', {
+const EndpointA = new EventSource('https://davalos.cs3680.com/api/stream.php', {
     withCredentials: true
 });
 
@@ -62,7 +62,7 @@ const packageMessageAnduserID = () => {
 }
 
 const search = async () => {
-    const res = await fetch('https://davalos.cs3680.com/messages/get_summary.php');
+    const res = await fetch('https://davalos.cs3680.com/api/get_summary.php');
     const data = await res.json();
     summary.value = data.summary;
 }
@@ -70,7 +70,7 @@ const search = async () => {
 
 async function enter(){
     try {
-        const response = await fetch('https://davalos.cs3680.com/messages/post_messages.php', {
+        const response = await fetch('https://davalos.cs3680.com/api/post_messages.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
