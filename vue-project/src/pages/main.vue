@@ -232,10 +232,24 @@ html, body {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     gap: 10px;
     background-color: #1a1a1a;
-    margin-bottom: 0;            
+    margin-bottom: 0;
+    max-height: calc(100vh - 120px);
+}
+
+.chat-window::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 10px;
 }
 
 .textplate {
