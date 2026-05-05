@@ -58,7 +58,7 @@ const logIn = async () => {
 
                 <h2>Don't have an account?</h2>
                     <button type="button" @click="$router.push('/signUp')" class="SignUp"> Sign Up </button>
-                    <button type="button" @click="$router.push('/main')" class="SignUp"> main</button>
+                    <!-- <button type="button" @click="$router.push('/main')" class="SignUp"> main</button> -->
             </form>
         </div>
     </div>
