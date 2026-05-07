@@ -52,7 +52,7 @@ const logIn = async () => {
                 <label for="email">Email: </label>
                 <input v-model="email"><br>
                 <label for="password">Password: </label>
-                <<input type="password" v-model="password">
+                <input type="password" v-model="password">
 
                 <button type="submit">Log in</button>
 
